@@ -1,0 +1,81 @@
+/* ریست ساده برای بدنه */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  direction: rtl; /* برای متن فارسی */
+}
+
+/* تیترها */
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* فرم اضافه کردن رکورد */
+form#tafziliForm {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+form#tafziliForm input[type="text"],
+form#tafziliForm input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+}
+
+form#tafziliForm label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+form#tafziliForm button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form#tafziliForm button:hover {
+  background-color: #45a049;
+}
+
+/* جدول لیست رکوردها */
+table#tafziliTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table#tafziliTable th,
+table#tafziliTable td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table#tafziliTable th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table#tafziliTable tr:hover {
+  background-color: #f1f1f1;
+}
