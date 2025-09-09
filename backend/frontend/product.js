@@ -2,6 +2,8 @@ const API_URL = "http://127.0.0.1:8000/api/product/";
 
 document.addEventListener("DOMContentLoaded", function() {
     const tableBody = document.querySelector("#productTable tbody");
+    const nextButton = document.getElementById("nextPage");
+    const prevButton = document.getElementById("prevPage");
 
     let products = []; // داده‌ها از API
     let currentPage = 1;
@@ -26,6 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
             tableBody.appendChild(row);
         });
     }
+
+    nextButton.addEventListener("click", () => {
+        if (currentPage * pageSize < products.length) {
+            currentPage++;
+            renderPage();
+        }
+    });
+
+    prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+        }
+    });
 
     // گرفتن داده‌ها از API
     fetch('/api/kala/')
