@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>مدیریت تفصیلی</title>
+  <link rel="stylesheet" href="{% static 'Tafzily.css' %}">
+</head>
+<body>
+  <h1>مدیریت تفصیلی</h1>
+
+  <h2>افزودن رکورد جدید</h2>
+  <form id="tafziliForm">
+    <input type="text" id="TafzilyCode" placeholder="کد تفصیلی" required>
+    <input type="text" id="MoenCode" placeholder="کد معین">
+    <input type="text" id="AllCode" placeholder="کد کل">
+    <input type="text" id="Fname" placeholder="نام">
+    <input type="text" id="Lastname" placeholder="نام خانوادگی">
+    <input type="text" id="City" placeholder="شهر">
+    <input type="text" id="Tel" placeholder="تلفن">
+    <input type="number" id="Bad" placeholder="بدهکار">
+    <input type="number" id="Change" placeholder="تغییر">
+    <input type="number" id="Mandeh" placeholder="مانده">
+    <input type="number" id="Atbar" placeholder="اعتبار">
+    <input type="text" id="MoenName" placeholder="نام معین">
+    <input type="text" id="Daftar" placeholder="دفتر">
+    <input type="text" id="Moarref" placeholder="معرف">
+    <input type="text" id="SMS" placeholder="SMS">
+    <input type="text" id="Ashxas" placeholder="اشخاص">
+    <label>
+      <input type="checkbox" id="Atabarok"> اعتبار فعال
+    </label>
+    <label>
+      <input type="checkbox" id="Ozv"> عضو
+    </label>
+    <input type="text" id="TafzilySharh" placeholder="شرح تفصیلی">
+    <button type="submit">افزودن</button>
+  </form>
+
+  <h2>لیست رکوردها</h2>
+  <table id="tafziliTable">
+    <thead>
+      <tr>
+        <th>کد تفصیلی</th>
+        <th>نام و نام خانوادگی</th>
+        <th>شهر</th>
+        <th>تلفن</th>
+        <th>بدهکار</th>
+        <th>بستانکار</th>
+        <th>مانده</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
