@@ -1,4 +1,3 @@
-# tafzili/models.py یا فایل جداگانه به اسم kala/models.py
 from django.db import models
 
 class Kala(models.Model):
@@ -13,7 +12,7 @@ class Kala(models.Model):
     SlaveUnit = models.CharField(max_length=50, blank=True, null=True)
     Mbna = models.CharField(max_length=50, blank=True, null=True)
     AllT = models.CharField(max_length=50, blank=True, null=True)
-    Price = models.DecimalField(max_digits=18, decimal_places=2, blank=True, null=True)
+    Price = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True, default=0)
     Percent = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
     Vaz = models.CharField(max_length=50, blank=True, null=True)
     PriceF = models.DecimalField(max_digits=18, decimal_places=2, blank=True, null=True)
@@ -43,12 +42,12 @@ class Kala(models.Model):
     barcode5 = models.CharField(max_length=50, blank=True, null=True)
     barcode6 = models.CharField(max_length=50, blank=True, null=True)
     Jayezeh = models.CharField(max_length=50, blank=True, null=True)
-    Mojode = models.DecimalField(max_digits=18, decimal_places=2, blank=True, null=True)
+    Mojode = models.DecimalField(max_digits=20, decimal_places=2, blank=True, null=True, default=0)
     tafcode = models.CharField(max_length=50, blank=True, null=True)
     tafName = models.CharField(max_length=255, blank=True, null=True)
     Tol = models.DecimalField(max_digits=18, decimal_places=2, blank=True, null=True)
     Zexamat = models.DecimalField(max_digits=18, decimal_places=2, blank=True, null=True)
 
     class Meta:
-        db_table = 'Kala'
         managed = False
+        db_table = 'Kala'
