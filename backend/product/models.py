@@ -51,4 +51,6 @@ class Kala(models.Model):
     class Meta:
         managed = False
         db_table = 'Kala'
+        
+        
     
