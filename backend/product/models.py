@@ -50,4 +50,4 @@ class Kala(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'Kala'
+        db_table = 'Kala' 
